@@ -1,0 +1,10 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore CSV files
+*.csv
+
+# Ignore other common files
+.DS_Store  # macOS metadata file
+Thumbs.db  # Windows metadata file
