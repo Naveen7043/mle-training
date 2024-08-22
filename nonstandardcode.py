@@ -1,25 +1,34 @@
 import os
-import tarfile
-from sklearn.model_selection import train_test_split
-import numpy as np
-import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.model_selection import GridSearchCV
-from scipy.stats import randint
-from six.moves import urllib
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 from sklearn.tree import DecisionTreeRegressor
+import tarfile
+from sklearn.model_selection import train_test_split
+import numpy as np
+import pandas as pd
+from scipy.stats import randint
+from six.moves import urllib
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.model_selection import GridSearchCV
+
+
 
 
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
 HOUSING_PATH = os.path.join("datasets", "housing")
 HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
+
+
+
+
+def load_housing_data(housing_path=HOUSING_PATH):
+    csv_path = os.path.join(housing_path, "housing.csv")
+    return pd.read_csv(csv_path)
 
 def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
     os.makedirs(housing_path, exist_ok=True)
@@ -28,13 +37,7 @@ def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
     housing_tgz = tarfile.open(tgz_path)
     housing_tgz.extractall(path=housing_path)
     housing_tgz.close()
-
-
-def load_housing_data(housing_path=HOUSING_PATH):
-    csv_path = os.path.join(housing_path, "housing.csv")
-    return pd.read_csv(csv_path)
-
-
+    
 housing = load_housing_data
 
 train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
@@ -102,9 +105,7 @@ imputer.fit(housing_num)
 X = imputer.transform(housing_num)
 
 housing_tr = pd.DataFrame(X, columns=housing_num.columns, index=housing.index)
-housing_tr["rooms_per_household"] = (
-        housing_tr["total_rooms"] / housing_tr["households"]
-        )
+housing_tr["rooms_per_household"] = (housing_tr["total_rooms"] / housing_tr["households"])
 housing_tr["bedrooms_per_room"] = (
     housing_tr["total_bedrooms"] / housing_tr["total_rooms"]
 )
@@ -122,11 +123,9 @@ lin_reg.fit(housing_prepared, housing_labels)
 housing_predictions = lin_reg.predict(housing_prepared)
 lin_mse = mean_squared_error(housing_labels, housing_predictions)
 lin_rmse = np.sqrt(lin_mse)
-lin_rmse
 
 
 lin_mae = mean_absolute_error(housing_labels, housing_predictions)
-lin_mae
 
 
 tree_reg = DecisionTreeRegressor(random_state=42)
@@ -135,7 +134,7 @@ tree_reg.fit(housing_prepared, housing_labels)
 housing_predictions = tree_reg.predict(housing_prepared)
 tree_mse = mean_squared_error(housing_labels, housing_predictions)
 tree_rmse = np.sqrt(tree_mse)
-tree_rmse
+
 
 
 param_distribs = {
