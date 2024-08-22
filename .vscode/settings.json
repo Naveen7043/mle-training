@@ -1,0 +1,46 @@
+{
+    "flake8.args": [
+        "--ignore=E402",
+        "--max-line-length=120"
+    ],
+    "black-formatter.args": [
+        "-l 79"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+    },
+    "python.analysis.fixAll": [
+        "source.unusedImports"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.unusedImports": "always"
+    },
+    "editor.formatOnSave": true,
+    "isort.path": [
+        "run"
+    ],
+    "isort.args": [
+        "--profile",
+        "black",
+        "-t",
+        "import",
+        "--float-to-top",
+        "warnings.filterwarnings('ignore', category=DeprecationWarning)",
+        "--float-to-top",
+        "import warnings",
+        "--float-to-top",
+        "--force-sort-within-sections"
+    ],
+    "editor.formatOnType": true,
+    "cSpell.words": [
+        "ERLE",
+        "isort",
+        "Miniconda",
+        "nonstandardcode",
+        "TAMLEP"
+    ]
+}
