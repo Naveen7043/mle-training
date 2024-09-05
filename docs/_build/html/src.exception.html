@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src.exception package &mdash; mle-training documentation v0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+
+    <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=0335fd14"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+</head>
+
+<body class="wy-body-for-nav">
+    <div class="wy-grid-for-nav">
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+                <div class="wy-side-nav-search">
+
+
+
+                    <a href="index.html" class="icon icon-home">
+                        mle-training documentation
+                    </a>
+                    <div role="search">
+                        <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+                            <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+                            <input type="hidden" name="check_keywords" value="yes" />
+                            <input type="hidden" name="area" value="default" />
+                        </form>
+                    </div>
+                </div>
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li><a class="reference internal" href="#">src.exception package</a>
+                                <ul>
+                                    <li><a class="reference internal" href="#submodules">Submodules</a></li>
+                                    <li><a class="reference internal"
+                                            href="#module-src.exception.exception">src.exception.exception module</a>
+                                        <ul>
+                                            <li><a class="reference internal"
+                                                    href="#src.exception.exception.CustomException"><code
+                                                        class="docutils literal notranslate"><span class="pre">CustomException</span></code></a>
+                                                <ul>
+                                                    <li><a class="reference internal"
+                                                            href="#src.exception.exception.CustomException.CustomException"><code
+                                                                class="docutils literal notranslate"><span class="pre">CustomException.CustomException</span></code></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="reference internal"
+                                                    href="#src.exception.exception.error_message_detail"><code
+                                                        class="docutils literal notranslate"><span class="pre">error_message_detail()</span></code></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="reference internal" href="#module-src.exception">Module contents</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="index.html">mle-training documentation</a>
+            </nav>
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+                            <li class="breadcrumb-item active">src.exception package</li>
+                            <li class="wy-breadcrumbs-aside">
+                                <a href="_sources/src.exception.rst.txt" rel="nofollow"> View page source</a>
+                            </li>
+                        </ul>
+                        <hr />
+                    </div>
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+
+                            <section id="src-exception-package">
+                                <h1>src.exception package<a class="headerlink" href="#src-exception-package"
+                                        title="Link to this heading"></a></h1>
+                                <section id="submodules">
+                                    <h2>Submodules<a class="headerlink" href="#submodules"
+                                            title="Link to this heading"></a></h2>
+                                </section>
+                                <section id="module-src.exception.exception">
+                                    <span id="src-exception-exception-module"></span>
+                                    <h2>src.exception.exception module<a class="headerlink"
+                                            href="#module-src.exception.exception" title="Link to this heading"></a>
+                                    </h2>
+                                    <dl class="py exception">
+                                        <dt class="sig sig-object py" id="src.exception.exception.CustomException">
+                                            <em class="property"><span class="pre">exception</span><span class="w">
+                                                </span></em><span class="sig-prename descclassname"><span
+                                                    class="pre">src.exception.exception.</span></span><span
+                                                class="sig-name descname"><span
+                                                    class="pre">CustomException</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                        class="pre">error_message</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                        class="pre">error_details:</span> <span
+                                                        class="pre">&lt;module</span> <span class="pre">'sys'</span>
+                                                    <span class="pre">(built-in)&gt;</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                href="_modules/src/exception/exception.html#CustomException"><span
+                                                    class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink" href="#src.exception.exception.CustomException"
+                                                title="Link to this definition"></a>
+                                        </dt>
+                                        <dd>
+                                            <p>Bases: <code
+                                                    class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code>
+                                            </p>
+                                            <dl class="py attribute">
+                                                <dt class="sig sig-object py"
+                                                    id="src.exception.exception.CustomException.CustomException">
+                                                    <span class="sig-name descname"><span
+                                                            class="pre">CustomException</span></span><em
+                                                        class="property"><span class="w"> </span><span class="p"><span
+                                                                class="pre">=</span></span><span class="w"> </span><span
+                                                            class="pre">{'CustomException':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'src.exception.exception.CustomException'&gt;,</span>
+                                                        <span class="pre">'__builtins__':</span> <span
+                                                            class="pre">{'ArithmeticError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ArithmeticError'&gt;,</span> <span
+                                                            class="pre">'AssertionError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'AssertionError'&gt;,</span> <span
+                                                            class="pre">'AttributeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'AttributeError'&gt;,</span> <span
+                                                            class="pre">'BaseException':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'BaseException'&gt;,</span> <span
+                                                            class="pre">'BlockingIOError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'BlockingIOError'&gt;,</span> <span
+                                                            class="pre">'BrokenPipeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'BrokenPipeError'&gt;,</span> <span
+                                                            class="pre">'BufferError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'BufferError'&gt;,</span> <span
+                                                            class="pre">'BytesWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'BytesWarning'&gt;,</span> <span
+                                                            class="pre">'ChildProcessError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ChildProcessError'&gt;,</span> <span
+                                                            class="pre">'ConnectionAbortedError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ConnectionAbortedError'&gt;,</span> <span
+                                                            class="pre">'ConnectionError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ConnectionError'&gt;,</span> <span
+                                                            class="pre">'ConnectionRefusedError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ConnectionRefusedError'&gt;,</span> <span
+                                                            class="pre">'ConnectionResetError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ConnectionResetError'&gt;,</span> <span
+                                                            class="pre">'DeprecationWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'DeprecationWarning'&gt;,</span> <span
+                                                            class="pre">'EOFError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'EOFError'&gt;,</span> <span
+                                                            class="pre">'Ellipsis':</span> <span
+                                                            class="pre">Ellipsis,</span> <span
+                                                            class="pre">'EnvironmentError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'OSError'&gt;,</span> <span
+                                                            class="pre">'Exception':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'Exception'&gt;,</span> <span
+                                                            class="pre">'False':</span> <span class="pre">False,</span>
+                                                        <span class="pre">'FileExistsError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'FileExistsError'&gt;,</span> <span
+                                                            class="pre">'FileNotFoundError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'FileNotFoundError'&gt;,</span> <span
+                                                            class="pre">'FloatingPointError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'FloatingPointError'&gt;,</span> <span
+                                                            class="pre">'FutureWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'FutureWarning'&gt;,</span> <span
+                                                            class="pre">'GeneratorExit':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'GeneratorExit'&gt;,</span> <span
+                                                            class="pre">'IOError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'OSError'&gt;,</span> <span
+                                                            class="pre">'ImportError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ImportError'&gt;,</span> <span
+                                                            class="pre">'ImportWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ImportWarning'&gt;,</span> <span
+                                                            class="pre">'IndentationError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'IndentationError'&gt;,</span> <span
+                                                            class="pre">'IndexError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'IndexError'&gt;,</span> <span
+                                                            class="pre">'InterruptedError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'InterruptedError'&gt;,</span> <span
+                                                            class="pre">'IsADirectoryError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'IsADirectoryError'&gt;,</span> <span
+                                                            class="pre">'KeyError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'KeyError'&gt;,</span> <span
+                                                            class="pre">'KeyboardInterrupt':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'KeyboardInterrupt'&gt;,</span> <span
+                                                            class="pre">'LookupError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'LookupError'&gt;,</span> <span
+                                                            class="pre">'MemoryError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'MemoryError'&gt;,</span> <span
+                                                            class="pre">'ModuleNotFoundError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ModuleNotFoundError'&gt;,</span> <span
+                                                            class="pre">'NameError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'NameError'&gt;,</span> <span
+                                                            class="pre">'None':</span> <span class="pre">None,</span>
+                                                        <span class="pre">'NotADirectoryError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'NotADirectoryError'&gt;,</span> <span
+                                                            class="pre">'NotImplemented':</span> <span
+                                                            class="pre">NotImplemented,</span> <span
+                                                            class="pre">'NotImplementedError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'NotImplementedError'&gt;,</span> <span
+                                                            class="pre">'OSError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'OSError'&gt;,</span> <span
+                                                            class="pre">'OverflowError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'OverflowError'&gt;,</span> <span
+                                                            class="pre">'PendingDeprecationWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'PendingDeprecationWarning'&gt;,</span> <span
+                                                            class="pre">'PermissionError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'PermissionError'&gt;,</span> <span
+                                                            class="pre">'ProcessLookupError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ProcessLookupError'&gt;,</span> <span
+                                                            class="pre">'RecursionError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'RecursionError'&gt;,</span> <span
+                                                            class="pre">'ReferenceError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ReferenceError'&gt;,</span> <span
+                                                            class="pre">'ResourceWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ResourceWarning'&gt;,</span> <span
+                                                            class="pre">'RuntimeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'RuntimeError'&gt;,</span> <span
+                                                            class="pre">'RuntimeWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'RuntimeWarning'&gt;,</span> <span
+                                                            class="pre">'StopAsyncIteration':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'StopAsyncIteration'&gt;,</span> <span
+                                                            class="pre">'StopIteration':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'StopIteration'&gt;,</span> <span
+                                                            class="pre">'SyntaxError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'SyntaxError'&gt;,</span> <span
+                                                            class="pre">'SyntaxWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'SyntaxWarning'&gt;,</span> <span
+                                                            class="pre">'SystemError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'SystemError'&gt;,</span> <span
+                                                            class="pre">'SystemExit':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'SystemExit'&gt;,</span> <span
+                                                            class="pre">'TabError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'TabError'&gt;,</span> <span
+                                                            class="pre">'TimeoutError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'TimeoutError'&gt;,</span> <span
+                                                            class="pre">'True':</span> <span class="pre">True,</span>
+                                                        <span class="pre">'TypeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'TypeError'&gt;,</span> <span
+                                                            class="pre">'UnboundLocalError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnboundLocalError'&gt;,</span> <span
+                                                            class="pre">'UnicodeDecodeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnicodeDecodeError'&gt;,</span> <span
+                                                            class="pre">'UnicodeEncodeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnicodeEncodeError'&gt;,</span> <span
+                                                            class="pre">'UnicodeError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnicodeError'&gt;,</span> <span
+                                                            class="pre">'UnicodeTranslateError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnicodeTranslateError'&gt;,</span> <span
+                                                            class="pre">'UnicodeWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UnicodeWarning'&gt;,</span> <span
+                                                            class="pre">'UserWarning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'UserWarning'&gt;,</span> <span
+                                                            class="pre">'ValueError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ValueError'&gt;,</span> <span
+                                                            class="pre">'Warning':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'Warning'&gt;,</span> <span
+                                                            class="pre">'ZeroDivisionError':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'ZeroDivisionError'&gt;,</span> <span
+                                                            class="pre">'__build_class__':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">__build_class__&gt;,</span> <span
+                                                            class="pre">'__debug__':</span> <span
+                                                            class="pre">True,</span> <span class="pre">'__doc__':</span>
+                                                        <span class="pre">&quot;Built-in</span> <span
+                                                            class="pre">functions,</span> <span
+                                                            class="pre">exceptions,</span> <span class="pre">and</span>
+                                                        <span class="pre">other</span> <span
+                                                            class="pre">objects.\n\nNoteworthy:</span> <span
+                                                            class="pre">None</span> <span class="pre">is</span> <span
+                                                            class="pre">the</span> <span class="pre">`nil'</span> <span
+                                                            class="pre">object;</span> <span class="pre">Ellipsis</span>
+                                                        <span class="pre">represents</span> <span
+                                                            class="pre">`...'</span> <span class="pre">in</span> <span
+                                                            class="pre">slices.&quot;,</span> <span
+                                                            class="pre">'__import__':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">__import__&gt;,</span> <span
+                                                            class="pre">'__loader__':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'_frozen_importlib.BuiltinImporter'&gt;,</span>
+                                                        <span class="pre">'__name__':</span> <span
+                                                            class="pre">'builtins',</span> <span
+                                                            class="pre">'__package__':</span> <span
+                                                            class="pre">'',</span> <span
+                                                            class="pre">'__pybind11_internals_v4_gcc_libstdcpp_cxxabi1014__':</span>
+                                                        <span class="pre">&lt;capsule</span> <span
+                                                            class="pre">object</span> <span class="pre">NULL&gt;,</span>
+                                                        <span class="pre">'__spec__':</span> <span
+                                                            class="pre">ModuleSpec(name='builtins',</span> <span
+                                                            class="pre">loader=&lt;class</span> <span
+                                                            class="pre">'_frozen_importlib.BuiltinImporter'&gt;,</span>
+                                                        <span class="pre">origin='built-in'),</span> <span
+                                                            class="pre">'abs':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">abs&gt;,</span> <span class="pre">'all':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">all&gt;,</span> <span class="pre">'any':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">any&gt;,</span> <span
+                                                            class="pre">'ascii':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">ascii&gt;,</span> <span
+                                                            class="pre">'bin':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">bin&gt;,</span> <span class="pre">'bool':</span>
+                                                        <span class="pre">&lt;class</span> <span
+                                                            class="pre">'bool'&gt;,</span> <span
+                                                            class="pre">'breakpoint':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">breakpoint&gt;,</span> <span
+                                                            class="pre">'bytearray':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'bytearray'&gt;,</span> <span
+                                                            class="pre">'bytes':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'bytes'&gt;,</span> <span
+                                                            class="pre">'callable':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">callable&gt;,</span> <span
+                                                            class="pre">'chr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">chr&gt;,</span> <span
+                                                            class="pre">'classmethod':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'classmethod'&gt;,</span> <span
+                                                            class="pre">'compile':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">compile&gt;,</span> <span
+                                                            class="pre">'complex':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'complex'&gt;,</span> <span
+                                                            class="pre">'copyright':</span> <span
+                                                            class="pre">Copyright</span> <span class="pre">(c)</span>
+                                                        <span class="pre">2001-2023</span> <span
+                                                            class="pre">Python</span> <span class="pre">Software</span>
+                                                        <span class="pre">Foundation.</span> <span
+                                                            class="pre">All</span> <span class="pre">Rights</span> <span
+                                                            class="pre">Reserved.</span>&#160; <span
+                                                            class="pre">Copyright</span> <span class="pre">(c)</span>
+                                                        <span class="pre">2000</span> <span
+                                                            class="pre">BeOpen.com.</span> <span class="pre">All</span>
+                                                        <span class="pre">Rights</span> <span
+                                                            class="pre">Reserved.</span>&#160; <span
+                                                            class="pre">Copyright</span> <span class="pre">(c)</span>
+                                                        <span class="pre">1995-2001</span> <span
+                                                            class="pre">Corporation</span> <span class="pre">for</span>
+                                                        <span class="pre">National</span> <span
+                                                            class="pre">Research</span> <span
+                                                            class="pre">Initiatives.</span> <span class="pre">All</span>
+                                                        <span class="pre">Rights</span> <span
+                                                            class="pre">Reserved.</span>&#160; <span
+                                                            class="pre">Copyright</span> <span class="pre">(c)</span>
+                                                        <span class="pre">1991-1995</span> <span
+                                                            class="pre">Stichting</span> <span
+                                                            class="pre">Mathematisch</span> <span
+                                                            class="pre">Centrum,</span> <span
+                                                            class="pre">Amsterdam.</span> <span class="pre">All</span>
+                                                        <span class="pre">Rights</span> <span
+                                                            class="pre">Reserved.,</span> <span
+                                                            class="pre">'credits':</span>&#160;&#160;&#160;&#160; <span
+                                                            class="pre">Thanks</span> <span class="pre">to</span> <span
+                                                            class="pre">CWI,</span> <span class="pre">CNRI,</span> <span
+                                                            class="pre">BeOpen.com,</span> <span class="pre">Zope</span>
+                                                        <span class="pre">Corporation</span> <span
+                                                            class="pre">and</span> <span class="pre">a</span> <span
+                                                            class="pre">cast</span> <span class="pre">of</span> <span
+                                                            class="pre">thousands</span>&#160;&#160;&#160;&#160; <span
+                                                            class="pre">for</span> <span class="pre">supporting</span>
+                                                        <span class="pre">Python</span> <span
+                                                            class="pre">development.</span>&#160; <span
+                                                            class="pre">See</span> <span
+                                                            class="pre">www.python.org</span> <span
+                                                            class="pre">for</span> <span class="pre">more</span> <span
+                                                            class="pre">information.,</span> <span
+                                                            class="pre">'delattr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">delattr&gt;,</span> <span
+                                                            class="pre">'dict':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'dict'&gt;,</span> <span
+                                                            class="pre">'dir':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">dir&gt;,</span> <span
+                                                            class="pre">'divmod':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">divmod&gt;,</span> <span
+                                                            class="pre">'enumerate':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'enumerate'&gt;,</span> <span
+                                                            class="pre">'eval':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">eval&gt;,</span> <span
+                                                            class="pre">'exec':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">exec&gt;,</span> <span
+                                                            class="pre">'exit':</span> <span class="pre">Use</span>
+                                                        <span class="pre">exit()</span> <span class="pre">or</span>
+                                                        <span class="pre">Ctrl-D</span> <span class="pre">(i.e.</span>
+                                                        <span class="pre">EOF)</span> <span class="pre">to</span> <span
+                                                            class="pre">exit,</span> <span class="pre">'filter':</span>
+                                                        <span class="pre">&lt;class</span> <span
+                                                            class="pre">'filter'&gt;,</span> <span
+                                                            class="pre">'float':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'float'&gt;,</span> <span
+                                                            class="pre">'format':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">format&gt;,</span> <span
+                                                            class="pre">'frozenset':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'frozenset'&gt;,</span> <span
+                                                            class="pre">'getattr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">getattr&gt;,</span> <span
+                                                            class="pre">'globals':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">globals&gt;,</span> <span
+                                                            class="pre">'hasattr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">hasattr&gt;,</span> <span
+                                                            class="pre">'hash':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">hash&gt;,</span> <span
+                                                            class="pre">'help':</span> <span class="pre">Type</span>
+                                                        <span class="pre">help()</span> <span class="pre">for</span>
+                                                        <span class="pre">interactive</span> <span
+                                                            class="pre">help,</span> <span class="pre">or</span> <span
+                                                            class="pre">help(object)</span> <span class="pre">for</span>
+                                                        <span class="pre">help</span> <span class="pre">about</span>
+                                                        <span class="pre">object.,</span> <span
+                                                            class="pre">'hex':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">hex&gt;,</span> <span class="pre">'id':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span class="pre">id&gt;,</span>
+                                                        <span class="pre">'input':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">input&gt;,</span> <span
+                                                            class="pre">'int':</span> <span class="pre">&lt;class</span>
+                                                        <span class="pre">'int'&gt;,</span> <span
+                                                            class="pre">'isinstance':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">isinstance&gt;,</span> <span
+                                                            class="pre">'issubclass':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">issubclass&gt;,</span> <span
+                                                            class="pre">'iter':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">iter&gt;,</span> <span class="pre">'len':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">len&gt;,</span> <span
+                                                            class="pre">'license':</span> <span class="pre">Type</span>
+                                                        <span class="pre">license()</span> <span class="pre">to</span>
+                                                        <span class="pre">see</span> <span class="pre">the</span> <span
+                                                            class="pre">full</span> <span class="pre">license</span>
+                                                        <span class="pre">text,</span> <span class="pre">'list':</span>
+                                                        <span class="pre">&lt;class</span> <span
+                                                            class="pre">'list'&gt;,</span> <span
+                                                            class="pre">'locals':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">locals&gt;,</span> <span
+                                                            class="pre">'map':</span> <span class="pre">&lt;class</span>
+                                                        <span class="pre">'map'&gt;,</span> <span
+                                                            class="pre">'max':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">max&gt;,</span> <span
+                                                            class="pre">'memoryview':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'memoryview'&gt;,</span> <span
+                                                            class="pre">'min':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">min&gt;,</span> <span class="pre">'next':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">next&gt;,</span> <span
+                                                            class="pre">'object':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'object'&gt;,</span> <span
+                                                            class="pre">'oct':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">oct&gt;,</span> <span class="pre">'open':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">open&gt;,</span> <span class="pre">'ord':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">ord&gt;,</span> <span class="pre">'pow':</span>
+                                                        <span class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">pow&gt;,</span> <span
+                                                            class="pre">'print':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">print&gt;,</span> <span
+                                                            class="pre">'property':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'property'&gt;,</span> <span
+                                                            class="pre">'quit':</span> <span class="pre">Use</span>
+                                                        <span class="pre">quit()</span> <span class="pre">or</span>
+                                                        <span class="pre">Ctrl-D</span> <span class="pre">(i.e.</span>
+                                                        <span class="pre">EOF)</span> <span class="pre">to</span> <span
+                                                            class="pre">exit,</span> <span class="pre">'range':</span>
+                                                        <span class="pre">&lt;class</span> <span
+                                                            class="pre">'range'&gt;,</span> <span
+                                                            class="pre">'repr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">repr&gt;,</span> <span
+                                                            class="pre">'reversed':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'reversed'&gt;,</span> <span
+                                                            class="pre">'round':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">round&gt;,</span> <span
+                                                            class="pre">'set':</span> <span class="pre">&lt;class</span>
+                                                        <span class="pre">'set'&gt;,</span> <span
+                                                            class="pre">'setattr':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">setattr&gt;,</span> <span
+                                                            class="pre">'slice':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'slice'&gt;,</span> <span
+                                                            class="pre">'sorted':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">sorted&gt;,</span> <span
+                                                            class="pre">'staticmethod':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'staticmethod'&gt;,</span> <span
+                                                            class="pre">'str':</span> <span class="pre">&lt;class</span>
+                                                        <span class="pre">'str'&gt;,</span> <span
+                                                            class="pre">'sum':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">sum&gt;,</span> <span
+                                                            class="pre">'super':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'super'&gt;,</span> <span
+                                                            class="pre">'tuple':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'tuple'&gt;,</span> <span
+                                                            class="pre">'type':</span> <span
+                                                            class="pre">&lt;class</span> <span
+                                                            class="pre">'type'&gt;,</span> <span
+                                                            class="pre">'vars':</span> <span
+                                                            class="pre">&lt;built-in</span> <span
+                                                            class="pre">function</span> <span
+                                                            class="pre">vars&gt;,</span> <span class="pre">'zip':</span>
+                                                        <span class="pre">&lt;class</span> <span
+                                                            class="pre">'zip'&gt;},</span> <span
+                                                            class="pre">'__cached__':</span> <span
+                                                            class="pre">'/mnt/c/Users/naveen.kandi/mle-training/src/exception/__pycache__/exception.cpython-39.pyc',</span>
+                                                        <span class="pre">'__doc__':</span> <span
+                                                            class="pre">None,</span> <span
+                                                            class="pre">'__file__':</span> <span
+                                                            class="pre">'/mnt/c/Users/naveen.kandi/mle-training/src/exception/exception.py',</span>
+                                                        <span class="pre">'__loader__':</span> <span
+                                                            class="pre">&lt;_frozen_importlib_external.SourceFileLoader</span>
+                                                        <span class="pre">object&gt;,</span> <span
+                                                            class="pre">'__name__':</span> <span
+                                                            class="pre">'src.exception.exception',</span> <span
+                                                            class="pre">'__package__':</span> <span
+                                                            class="pre">'src.exception',</span> <span
+                                                            class="pre">'__spec__':</span> <span
+                                                            class="pre">ModuleSpec(name='src.exception.exception',</span>
+                                                        <span
+                                                            class="pre">loader=&lt;_frozen_importlib_external.SourceFileLoader</span>
+                                                        <span class="pre">object&gt;,</span> <span
+                                                            class="pre">origin='/mnt/c/Users/naveen.kandi/mle-training/src/exception/exception.py'),</span>
+                                                        <span class="pre">'error_message_detail':</span> <span
+                                                            class="pre">&lt;function</span> <span
+                                                            class="pre">error_message_detail&gt;,</span> <span
+                                                            class="pre">'logging':</span> <span
+                                                            class="pre">&lt;module</span> <span
+                                                            class="pre">'src.logger.logging'</span> <span
+                                                            class="pre">from</span> <span
+                                                            class="pre">'/mnt/c/Users/naveen.kandi/mle-training/src/logger/logging.py'&gt;,</span>
+                                                        <span class="pre">'sys':</span> <span
+                                                            class="pre">&lt;module</span> <span class="pre">'sys'</span>
+                                                        <span class="pre">(built-in)&gt;}</span></em><a
+                                                        class="headerlink"
+                                                        href="#src.exception.exception.CustomException.CustomException"
+                                                        title="Link to this definition"></a>
+                                                </dt>
+                                                <dd></dd>
+                                            </dl>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py function">
+                                        <dt class="sig sig-object py" id="src.exception.exception.error_message_detail">
+                                            <span class="sig-prename descclassname"><span
+                                                    class="pre">src.exception.exception.</span></span><span
+                                                class="sig-name descname"><span
+                                                    class="pre">error_message_detail</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                        class="pre">error</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">error_detail:</span>
+                                                    <span class="pre">&lt;module</span> <span class="pre">'sys'</span>
+                                                    <span class="pre">(built-in)&gt;</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                href="_modules/src/exception/exception.html#error_message_detail"><span
+                                                    class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink" href="#src.exception.exception.error_message_detail"
+                                                title="Link to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                </section>
+                                <section id="module-src.exception">
+                                    <span id="module-contents"></span>
+                                    <h2>Module contents<a class="headerlink" href="#module-src.exception"
+                                            title="Link to this heading"></a></h2>
+                                </section>
+                            </section>
+
+
+                        </div>
+                    </div>
+                    <footer>
+
+                        <hr />
+
+                        <div role="contentinfo">
+                            <p>&#169; Copyright 2024, Kandi Naveen.</p>
+                        </div>
+
+                        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+                        <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+                        provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+
+</html>
