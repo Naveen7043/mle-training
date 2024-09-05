@@ -1,6 +1,4 @@
-import argparse
 
-import joblib
 import numpy as np
 import pandas as pd
 from scipy.stats import randint
@@ -13,17 +11,16 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeRegressor
 
-#from src.logger.logging import logging
-import sys
+from src.logger.logging import logging
 
 try:
 
     def load_data(data_path):
-#        logging.info("Loading data in dataframe in train module")
+        logging.info("Loading data in dataframe in train module")
         return pd.read_csv(data_path)
 
     def preprocess_features(data):
-#        logging.info("Preprocessing initizated")
+        logging.info("Preprocessing initizated")
         housing = data.drop("median_house_value", axis=1)
         housing_labels = data["median_house_value"]
         num_attribs = list(housing.select_dtypes(include=[np.number]))
@@ -43,30 +40,30 @@ try:
         )
 
         housing_prepared = full_pipeline.fit_transform(housing)
-#        logging.info(housing_prepared)
-#        logging.info(housing_labels)
+        logging.info(housing_prepared)
+        logging.info(housing_labels)
         return housing_prepared, housing_labels
 
     def train_linear_regression(housing_prepared, housing_labels):
-#        logging.info("Creating Linear Regression model")
+        logging.info("Creating Linear Regression model")
         lin_reg = LinearRegression()
         lin_reg.fit(housing_prepared, housing_labels)
         return lin_reg
 
     def train_decision_tree(housing_prepared, housing_labels):
-#        logging.info("Creating Decision Tree model")
+        logging.info("Creating Decision Tree model")
         tree_reg = DecisionTreeRegressor(random_state=42)
         tree_reg.fit(housing_prepared, housing_labels)
         return tree_reg
 
     def train_random_forest(housing_prepared, housing_labels):
-#        logging.info("Creating Random forest model")
+        logging.info("Creating Random forest model")
         forest_reg = RandomForestRegressor(random_state=42)
         forest_reg.fit(housing_prepared, housing_labels)
         return forest_reg
 
     def randomized_search_cv(housing_prepared, housing_labels):
-#        logging.info("Initizating Random Search cv")
+        logging.info("Initizating Random Search cv")
         param_distribs = {
             "n_estimators": randint(low=1, high=200),
             "max_features": randint(low=1, high=8),
@@ -81,7 +78,7 @@ try:
             random_state=42,
         )
         rnd_search.fit(housing_prepared, housing_labels)
-#        logging.info(rnd_search.best_estimator_)
+        logging.info(rnd_search.best_estimator_)
         return rnd_search.best_estimator_
 
     def train_and_save_models(train_data_path, model_output_path):
@@ -89,7 +86,7 @@ try:
         housing_prepared, housing_labels = preprocess_features(data)
 
         # Train multiple models
-#        logging.info("Training models with the given data")
+        logging.info("Training models with the given data")
         models = {
             "linear_regression": train_linear_regression(housing_prepared,
                                                          housing_labels),
@@ -103,12 +100,12 @@ try:
 
         # Save models
         for model_name, model in models.items():
-#            logging.info("Model trained and saved at f{}".
-                        # format(model_output_path)
+            logging.info("Model trained and saved at f{}".
+                        # format(model_output_path))
             joblib.dump(model, f"{model_output_path}/{model_name}.pkl")
 
 except Exception as e:
-    raise Exception(e, sys)
+    raise CustomException(e, sys)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=(

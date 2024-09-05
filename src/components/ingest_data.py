@@ -6,19 +6,12 @@ import pandas as pd
 from six.moves import urllib  # type: ignore
 from sklearn.model_selection import train_test_split
 
-# from src.exception.exception import CustomException
-# from src.logger.logging import logging
+ from src.exception.exception import CustomException
+ from src.logger.logging import logging
 
 try:
 
-    '''def fetch_housing_data(housing_url, housing_path):
-#       logging.info("Fetching data from give URL")
-        os.makedirs(housing_path, exist_ok=True)
-        tgz_path = os.path.join(housing_path, "housing.tgz")
-        urllib.request.urlretrieve(housing_url, tgz_path)
-        housing_tgz = tarfile.open(tgz_path)
-        housing_tgz.extractall(path=housing_path)
-        housing_tgz.close()'''
+    
     def fetch_housing_data(housing_url, housing_path):
         os.makedirs(housing_path, exist_ok=True)
         tgz_path = os.path.join(housing_path, "housing.tgz")
@@ -28,16 +21,16 @@ try:
         housing_tgz.close()
 
     def load_housing_data(housing_path):
-#        logging.info("Loading data into Dataframe")
+        logging.info("Loading data into Dataframe")
         csv_path = os.path.join(housing_path, "housing.csv")
         return pd.read_csv(csv_path)
 
     def split_data(data, test_size, seed):
-#        logging.info("Spiltting data into train and test")
+        logging.info("Spiltting data into train and test")
         return train_test_split(data, test_size=test_size, random_state=seed)
 
 except Exception as e:
-    raise Exception(e, sys)
+    raise CustomException(e, sys)
 
 
 if __name__ == "__main__":

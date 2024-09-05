@@ -10,16 +10,17 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
-#from src.logger.logging import logging
+from src.logger.logging import logging
+from src.exception.exception import CustomException
 
 
 def load_model(model_path):
-#    logging.info("Loading Model")
+    logging.info("Loading Model")
     return joblib.load(model_path)
 
 
 def preprocess_features(data):
-#    logging.info("Preprocessing file in test")
+    logging.info("Preprocessing file in test")
     num_attribs = list(data.select_dtypes(include=[np.number]))
     cat_attribs = ["ocean_proximity"]
     num_pipeline = Pipeline(
@@ -38,10 +39,10 @@ def preprocess_features(data):
 
 
 def score_models(model_path, data_path, output_path):
-#    logging.info("Model Scoring Began")
+    logging.info("Model Scoring Began")
     data = pd.read_csv(data_path)
     features = preprocess_features(data.drop("median_house_value", axis=1))
-    # Check if model_path is a directory or a single file
+    Check if model_path is a directory or a single file
     if os.path.isdir(model_path):
         models = {
             name: load_model(os.path.join(model_path, name))
@@ -61,7 +62,7 @@ def score_models(model_path, data_path, output_path):
         output_file_path = os.path.join(output_path, f"{name}_predictions.csv")
         pd.DataFrame(predictions,
                      columns=["Predictions"]).to_csv(output_file_path)
-#        logging.info(f"Predictions saved to {output_file_path}")
+        logging.info(f"Predictions saved to {output_file_path}")
         print(f"Predictions saved to {output_file_path}")
 
 
@@ -85,4 +86,4 @@ if __name__ == "__main__":
         args = parser.parse_args()
         score_models(args.model_path, args.data_path, args.output_path)
     except Exception as e:
-        raise Exception(e, sys)
+        raise CustomException(e, sys)
